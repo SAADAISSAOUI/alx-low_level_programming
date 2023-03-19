@@ -2,34 +2,32 @@
 
 /**
  * main - prints all possible combinations of two two-digit numbers
- * Return: 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int n1, n2, m1, m2;
+	int i, j;
 
-    for (n1 = 0; n1 <= 9; n1++)
-    {
-        for (n2 = 0; n2 <= 9; n2++)
-        {
-            for (m1 = n1; m1 <= 9; m1++)
-            {
-                for (m2 = (m1 == n1 ? n2 + 1 : 0); m2 <= 9; m2++)
-                {
-                    putchar(n1 + '0');
-                    putchar(n2 + '0');
-                    putchar(' ');
-                    putchar(m1 + '0');
-                    putchar(m2 + '0');
-                    if (n1 != 9 || n2 != 8 || m1 != 9 || m2 != 9)
-                    {
-                        putchar(',');
-                        putchar(' ');
-                    }
-                }
-            }
-        }
-    }
-    putchar('\n');
-    return (0);
+	for (i = 0; i < 100; i++)
+	{
+		for (j = 0; j < 100; j++)
+		{
+			if (i < j)
+			{
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+		}
+	}
+	putchar('\n');
+	return (0);
 }
