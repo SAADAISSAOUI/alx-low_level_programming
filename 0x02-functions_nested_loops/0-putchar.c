@@ -1,9 +1,9 @@
 #include "main.h"
 	/**
-	 * main - print _putchar,followed by new line 
+	 * main - print _putchar
 	 * is written by mbah
 	 * Return: 0
-	 */
+	 */want to play here 
 
 
 	int main(void)
@@ -17,5 +17,4 @@
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	return (0);
-	}
+	return (
